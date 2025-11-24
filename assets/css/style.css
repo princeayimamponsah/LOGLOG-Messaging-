@@ -7,10 +7,10 @@
 }
 
 body {
-   body {
-    background: #f8f9fa;
+   
+    background: #f0f0f0; 
     font-family: Arial, sans-serif;
-}
+
 
 }
 
@@ -112,7 +112,7 @@ p a:hover{
 
 
 /* MAIN PAGE  */
-nav {
+.navbar{
     background: #616072;
     color: white;
     padding: 16px 30px;
@@ -121,10 +121,30 @@ nav {
     align-items: center;
 }
 
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+
+
 nav .logo {
     font-size: 26px;
     font-weight: bold;
     color: #000;
+}
+
+nav .logo-icon{
+    font-size: 36px;
+    color: #00185c;
+    
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
 }
 
 nav .logout-btn {
@@ -136,13 +156,43 @@ nav .logout-btn {
     cursor: pointer;
 }
 
+nav .logout-btn:hover {
+    background: #ff4c4c;
+    color: black;
+    transform:scale(0.5px) ;
+}
+
+nav .i{
+ 
+    color: white;
+    margin-right: 8px;
+    
+}
+.add-btn{
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 36px;
+
+
+}
+
+.add-btn:hover, .message-btn:hover{
+    color: #33277cda;
+}
+
+.message-btn{
+    margin-right: 20px;
+     cursor: pointer;
+     font-size: 36px;
+}
+
 
 .dashboard {
     display: flex;
 }
 
 .sidebar {
-    width: 240px;
+    width: 440px;
     background: #010022;
     color: white;
     height: 100vh;
@@ -174,3 +224,61 @@ nav .logout-btn {
     cursor: pointer;
     
 } 
+
+
+.request{
+   
+    background:#e6e6e7 ;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+      box-shadow: 0 0 5px #000000fd;
+
+}
+.request h1{
+    text-align: center;
+    padding: 20px;
+}
+.request table{
+    width: 100%;
+    
+    
+}
+
+.request table th, .request table td{
+    font-size: 20px;
+    text-align: center;
+    padding: 12px;
+    border: 2px solid rgb(83, 82, 82);
+  
+    
+    
+}
+.accept-btn{
+    background: rgb(20, 220, 63);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+
+}
+
+.accept-btn:hover{
+    background: green;
+}
+
+.reject-btn{
+    background: crimson;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.reject-btn:hover{
+    background: rgb(128, 0, 0);
+}

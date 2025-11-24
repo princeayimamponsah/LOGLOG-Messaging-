@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include "navbar.php";
 if(!isset($_SESSION['email'])){
     header("Location: index.php");
     exit();
@@ -14,14 +15,11 @@ if(!isset($_SESSION['email'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body >
     
-        <nav>
-            <h1 class="logo">LOGLOG</h1>
-            
-            <button onclick="window.location.href='logout.php'" class="logout-btn">Logout</button>
-        </nav>
+       
      <div class="dashboard">
         <div class="sidebar">
             <h2>Chats</h2>

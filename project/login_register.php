@@ -5,6 +5,9 @@ session_start();
 // Load DB connection in confing.php
 require_once 'config.php';
 
+$_SESSION['user_id'];
+
+
 if (isset($_POST['register'])){
     $name =trim( $_POST['name']);
     $email =trim(  $_POST['email']);
