@@ -26,12 +26,6 @@ if(!isset($_SESSION['email'])){
            
         </div>
 
-    <div class="box">
-            <h1>Welcome,
-                <span> <?= $_SESSION['name']; ?></span>
-            </h1>
-       
-        
-    </div>
+    
 </body>
 </html>

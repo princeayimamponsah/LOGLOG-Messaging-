@@ -7,7 +7,16 @@
 </a>
            
             <h1 class="logo">LOGLOG</h1>
+            </a>
             </div>
+
+            <div class="box">
+            <h1>Welcome,
+                <span> <?= $_SESSION['name']; ?></span>
+            </h1>
+       
+        
+    </div>
 
             <div class="nav-right">
                 <a href="../project/requestPage.php">
