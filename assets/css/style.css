@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    
 
 }
 
 body {
    
-    background: #f0f0f0; 
+    background: #fbffc0; 
     font-family: Arial, sans-serif;
 
 
@@ -43,30 +44,46 @@ h2{
     
 }
 
-input,
-select{
+.name-input,.email-input,.password-input,select{
     width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
     border: none;
     outline: none;
     border-radius: 6px;
-    color: rgb(53, 53, 53);
-    font-size: 16px;
-    background: rgb(207, 206, 206);
-}
-
-button {
-    cursor: pointer;
-    border: none;
-}
-
-button:hover{
-    background: #33277cda;
-    color: black;
-    cursor: pointer;
+    margin: 2px;
+    box-shadow: 2px 2px 10px #0000001a;
+    padding: 20px;
     
 }
+
+
+.file-input{
+     width: 220px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    margin: 2px;
+    box-shadow: 2px 2px 10px #0000001a;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+
+   
+
+
+}
+.file-input:hover{
+    cursor: pointer;
+    box-shadow: 4px 4px 15px #00000033;
+}
+ .file-input h4{
+    position: absolute;
+    margin-left: 500px;
+    margin-top: -40px;
+    font-size: 16px;
+    color: rgb(19, 0, 63);
+ }
 
 p{
     font-size: 14.5px;
@@ -103,7 +120,7 @@ p a:hover{
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background: rgb(19, 0, 63);
+    background:#083a01;
     border-radius: 6px;
     border: none;
     outline: none;
@@ -113,12 +130,14 @@ p a:hover{
 
 /* MAIN PAGE  */
 .navbar{
-    background: #616072;
-    color: white;
+    background: #083a01;
+    
     padding: 16px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 40px;
+    margin: 20px;
 }
 
 .nav-left{
@@ -132,14 +151,37 @@ p a:hover{
 nav .logo {
     font-size: 26px;
     font-weight: bold;
-    color: #000;
+    color: #D0DB61;
 }
 
 nav .logo-icon{
     font-size: 36px;
-    color: #00185c;
+    color: #D0DB61;
+    margin-left: 10px;
     
 }
+.box{
+    flex: 1;
+    padding: 30px;
+    /* margin: 100px; */
+    
+}
+
+.box h1, span{
+    font-size: 20px;
+    text-align: center;
+    color: #fbffc0;
+}
+
+
+
+
+.box button:hover{
+    background: #33277cda;
+    color: black;
+    cursor: pointer;
+    
+} 
 
 .nav-right {
     display: flex;
@@ -149,11 +191,12 @@ nav .logo-icon{
 
 nav .logout-btn {
     padding: 10px 18px;
-    background: crimson;
+    background: rgba(233, 14, 58, 0.815);
     border: 0;
     border-radius: 6px;
     color: white;
     cursor: pointer;
+    margin-right: 20px  ;
 }
 
 nav .logout-btn:hover {
@@ -164,15 +207,17 @@ nav .logout-btn:hover {
 
 nav .i{
  
-    color: white;
+    color: #F74D29;
     margin-right: 8px;
     
 }
+
+
 .add-btn{
     margin-right: 10px;
     cursor: pointer;
     font-size: 36px;
-    color: white;
+    color: #D0DB61;
 
 
 }
@@ -185,6 +230,7 @@ nav .i{
     margin-right: 20px;
      cursor: pointer;
      font-size: 36px;
+     color:#D0DB61;
 }
 
 
@@ -193,43 +239,73 @@ nav .i{
 }
 
 .sidebar {
-    width: 440px;
-    background: #010022;
-    color: white;
+    width: 300px;
+    background: #fbffc0 ;
+    color: rgb(1, 39, 6);
     height: 100vh;
     padding: 20px;
+    box-shadow: 0 2px 6px rgba(1, 0, 34, 0.5);
+    border-radius: 20px;
+    margin : 0 20px 0  0;    
+/* border: 2px solid #010022; */
+
+    
 }
+
+.sidebar table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sidebar table th{
+   
+    text-align: center;
+    border-bottom: 1px solid #bdb9b9;
+    font-size: 24px;
+    color: rgb(13, 114, 0);
+}
+
+ .sidebar table td{
+    text-align: left;
+    border: none;
+    font-size: 20px;
+    color: rgb(2, 56, 0);
+    width: 100%;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.sidebar table td:hover{
+    background: #102e00;
+    border-radius: 10px;
+    color:#D0DB61
+}
+
+
+.chats{
+    flex: 1;
+    padding: 30px;
+    margin-right: 20px;
+    background: #ececeb;
+    border-radius: 20px;
+    box-shadow: 0 0 05px #000;
+}
+
+
+
+
+
 
 .content {
     flex: 1;
     padding: 30px;
 }
 
-.box{
-    flex: 1;
-    padding: 30px;
-    /* margin: 100px; */
-    
-}
 
-.box p{
-    font-size: 200px;
-    text-align: center;
-
-}
-
-
-.box button:hover{
-    background: #33277cda;
-    color: black;
-    cursor: pointer;
-    
-} 
 
 
 .request{
    
-    background:#e6e6e7 ;
+    background:#fbffc0 ;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -250,14 +326,14 @@ nav .i{
     font-size: 20px;
     text-align: center;
     padding: 12px;
-    border: 2px solid rgb(83, 82, 82);
+    border: 2px solid rgba(110, 109, 109, 0.151);
   
     
     
 }
 .accept-btn{
-    background: rgb(20, 220, 63);
-    color: white;
+    background:#032500;
+    color: #F9EEBD;
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
@@ -271,8 +347,8 @@ nav .i{
 }
 
 .reject-btn{
-    background: crimson;
-    color: white;
+    background: rgb(136, 2, 29);
+    color: #F9EEBD;
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
@@ -282,4 +358,91 @@ nav .i{
 
 .reject-btn:hover{
     background: rgb(128, 0, 0);
+}
+
+
+.chats {
+    flex: 1;
+    background: #fbffc0;
+    display: flex;
+    flex-direction: column;
+     box-shadow:  6px rgba(1,0,34,0.2);
+    
+ 
+}
+
+
+.chat-header {
+    background: #032500;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:  6px rgba(1,0,34,0.2);
+    border-radius: 20px;
+}
+
+.nav-chat-act{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-chat-act h4{
+    color: #fbffc0;
+}
+.nav-chat-act p{
+    margin-top: 30px;
+    color: #fbffc0;
+    text-decoration: none;
+    display:  none;
+}
+
+.nav-chat-icons{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-chat-icons i{
+    font-size: 28px;
+    cursor: pointer;
+    color: #D0DB61;
+    
+}
+
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+.chat-input {
+    background: transparent;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #02740a;
+    background: transparent;
+    
+}
+
+
+
+.chat-input i {
+    font-size: 28px;
+    cursor: pointer;
+    color: #017a25;
+    
+
+
 }

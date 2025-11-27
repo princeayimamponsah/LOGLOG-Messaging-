@@ -37,8 +37,8 @@ function isActiveForm($formName, $activeForm) {
             <form action="login_register.php" method="post">
                 <h2>Login</h2>
                 <?= showError($errors['login']); ?>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="email" name="email" placeholder="E-mail" class ="email-input" required>
+                <input type="password" name="password" placeholder="Password" class ="password-input" required>
                 <button type="submit" name="login" class="log-button">Login</button>
                 <p>Don't have an account? 
                     <a href="#" onclick="showForm('register-form')">Register</a>
@@ -51,14 +51,16 @@ function isActiveForm($formName, $activeForm) {
             <form action="login_register.php" method="POST">
                 <h2>Register</h2>
                 <?= showError($errors['register']); ?>
-                <input type="text" name="name" placeholder="Full name" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="file" name="profilePic" id="profilePic" class="file-input"  /><h4>---Upload a profile picture</h4>
+                <input type="text" name="name" placeholder="Full name"  class ="name-input" required>
+                <input type="email" name="email" placeholder="E-mail"  class ="email-input" required>
+                <input type="password" name="password" placeholder="Password" class ="password-input"required>
                 <select name="role">
                     <option value="">--Select Role--</option>
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                 </select>
+                
                 <button type="submit" name="register" class="reg-button">Register</button>
                 <p>Already have an account? 
                     <a href="#" onclick="showForm('login-form')">Login</a>

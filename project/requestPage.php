@@ -40,12 +40,13 @@ $details = $stmt->get_result();
      <?php if($details && $details->num_rows > 0): ?>
         <?php while($user = $details->fetch_assoc()): ?>
     <tr>
-         <td><?= htmlspecialchars($user['name']); ?></td>
+         <td><?php echo htmlspecialchars($user['name']); ?></td>
+</td>
    
    <td>
     <button class="accept-btn" id="reqBtn<?php echo $user['id']; ?>" onclick="sendReq('<?php echo $user['id']; ?>','<?php echo $user['name']; ?>','<?php echo $loggedInId; ?>','<?php echo $loggedInName; ?>')"> Send Request</button>
-    <button type="button" class="accept-btn" style="display:none" id="sentBtn<?php echo $user['id']; ?>" disabled>Request sent</button>
-   <!-- <button class="reject-btn">Reject</button> -->
+    <button type="button" class="btn btn-primary   "   style="display:none" id="sentBtn<?php echo $user['id']; ?>" disabled>Request sent</button>
+   
 </td>
 </tr>   
  <?php endwhile; ?>

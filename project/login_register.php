@@ -13,6 +13,7 @@ if (isset($_POST['register'])){
     $email =trim(  $_POST['email']);
     $password_raw =trim($_POST['password']);
     $role ='user';
+    $profile = trim($_POST['profilePic']);
   
   
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -46,7 +47,7 @@ if (isset($_POST['register'])){
       
     // $password = uniqid($password_raw);
  
-   $conn->query("INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$password_raw', '$role')");
+   $conn->query("INSERT INTO users (name, email, password, role, profile_pic) VALUES ('$name', '$email', '$password_raw', '$role', '$profile')");
               $_SESSION['register_error'] = 'Registered Succesfully';
         $_SESSION['active_form'] = 'login';
            header("Location: index.php");
