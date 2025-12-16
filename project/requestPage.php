@@ -79,6 +79,7 @@ $details = $stmt->get_result();
                     // alert("we dey");
                        $('#sentBtn' + idTo).css("display", "block"); 
                        $('#reqBtn' + idTo).css("display", "none"); 
+                        window.location.reload();
                 }else{
                     alert("komot");
                 }

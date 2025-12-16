@@ -62,43 +62,29 @@ $details = $stmt->get_result();
 
 <script>
     function acceptBtn(idTo){
-        // var reqBtn = document.getElementById('sentBtn');
         $.ajax({
-            type:"POST",
-            data: {"useridTo":idTo,
-                    
-             },
-            url:"notificationreceived.php",
-            success: function(accept){
-                if(accept == "done"){
-                    
+            type: "POST",
+            url: "notificationreceived.php",
+            data: { useridTo: idTo, action: 'accept' },
+            success: function(res){
+                if(res === "done"){
                     window.location.reload();
-
                 }
             }
         });
-   
     }
 
-
     function rejectBtn(idTo){
-
         $.ajax({
-            type:"POST",
-            data:{"useridTo":idTo,
-
-            },
-            url:"notificationreceived.php",
-            succes: function(reject){
-                if(reject == "done"){
+            type: "POST",
+            url: "notificationreceived.php",
+            data: { useridTo: idTo, action: 'reject' },
+            success: function(res){
+                if(res === "done"){
                     window.location.reload();
-
                 }
-
             }
-        }
-
-        )
+        });
     }
 </script>
 

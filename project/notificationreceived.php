@@ -1,38 +1,20 @@
 <?php
 require_once 'config.php';
-$notCode = uniqid("NOT");
-$useridTo = $_POST['useridTo'];
-// var_dump ($useridTo);
-// exit;
 
-  $stmt = $conn->query("UPDATE user_notification SET NOT_STATUS = '1'  WHERE NOT_CODE = '$useridTo' ");
+$useridTo = $_POST['useridTo'] ?? '';
+$action = $_POST['action'] ?? 'accept';
 
-              // $_SESSION['register_error'] = 'Registered Succesfully';
-
-if($stmt == true){
-    echo "done";
-}else{
-  echo "failed";
+if (empty($useridTo)){
+    echo 'failed';
+    exit;
 }
 
-?>
+$status = ($action === 'reject') ? '2' : '1';
 
-<?php
-require_once 'config.php';
-$notCode = uniqid("NOT");
-$useridTo = $_POST['useridTo'];
-// var_dump ($useridTo);
-// exit;
-
-  $stmt = $conn->query("UPDATE user_notification SET NOT_STATUS = '2'  WHERE NOT_CODE = '$useridTo' ");
-
-              // $_SESSION['register_error'] = 'Registered Succesfully';
-
-if($stmt == true){
-    echo "done";
-}else{
-  echo "failed";
-}
+$stmt = $conn->prepare("UPDATE user_notification SET NOT_STATUS = ? WHERE NOT_CODE = ?");
+$stmt->bind_param('ss', $status, $useridTo);
+$ok = $stmt->execute();
+echo $ok ? 'done' : 'failed';
 
 ?>
 

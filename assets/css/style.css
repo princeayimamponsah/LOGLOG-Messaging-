@@ -124,6 +124,7 @@ p a:hover{
     border-radius: 6px;
     border: none;
     outline: none;
+    cursor: pointer;
 } 
 
 
@@ -152,6 +153,7 @@ nav .logo {
     font-size: 26px;
     font-weight: bold;
     color: #D0DB61;
+    cursor: pointer;
 }
 
 nav .logo-icon{
@@ -240,14 +242,14 @@ nav .i{
 
 .sidebar {
     width: 300px;
-    background: #fbffc0 ;
+    height: 500px;
+    background: #083a01 ;
     color: rgb(1, 39, 6);
-    height: 100vh;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(1, 0, 34, 0.5);
     border-radius: 20px;
-    margin : 0 20px 0  0;    
-/* border: 2px solid #010022; */
+    /* margin : 0 20px 0  0;     */
+
 
     
 }
@@ -260,9 +262,10 @@ nav .i{
 .sidebar table th{
    
     text-align: center;
-    border-bottom: 1px solid #bdb9b9;
+    /* border-bottom: 1px solid #bdb9b9; */
     font-size: 24px;
     color: rgb(13, 114, 0);
+    cursor: pointer;
 }
 
  .sidebar table td{
@@ -273,6 +276,7 @@ nav .i{
     width: 100%;
     padding: 20px 0;
     cursor: pointer;
+    box-shadow: 0 0 5px #0000001a;
 }
 .sidebar table td:hover{
     background: #102e00;
@@ -289,11 +293,6 @@ nav .i{
     border-radius: 20px;
     box-shadow: 0 0 05px #000;
 }
-
-
-
-
-
 
 .content {
     flex: 1;
@@ -389,6 +388,12 @@ nav .i{
 }
 .nav-chat-act h4{
     color: #fbffc0;
+    cursor: pointer;
+}
+
+.nav-chat-act h4:hover{
+    transform: scaleX(1.1);
+    color: #00ff40;
 }
 .nav-chat-act p{
     margin-top: 30px;
@@ -444,5 +449,43 @@ nav .i{
     color: #017a25;
     
 
+
+}
+
+.user-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.chat-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 5px;
+    cursor: pointer;
+}
+
+.settings-btn{
+    margin-right: 20px;
+     cursor: pointer;
+     font-size: 36px;
+     color:#D0DB61;
+
+}
+
+.settings-container{
+   
+
+
+
+}
+
+.settings-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: aqua;
+    background: 
 
 }

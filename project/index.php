@@ -34,7 +34,7 @@ function isActiveForm($formName, $activeForm) {
 
         <!-- LOGIN FORM -->
         <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
-            <form action="login_register.php" method="post">
+            <form action="login_register.php" method="post" >
                 <h2>Login</h2>
                 <?= showError($errors['login']); ?>
                 <input type="email" name="email" placeholder="E-mail" class ="email-input" required>
@@ -48,10 +48,9 @@ function isActiveForm($formName, $activeForm) {
 
         <!-- REGISTER FORM -->
         <div class="form-box <?= isActiveForm('register', $activeForm); ?>" id="register-form">
-            <form action="login_register.php" method="POST">
+            <form action="login_register.php" method="POST"  enctype="multipart/form-data">
                 <h2>Register</h2>
                 <?= showError($errors['register']); ?>
-                <input type="file" name="profilePic" id="profilePic" class="file-input"  /><h4>---Upload a profile picture</h4>
                 <input type="text" name="name" placeholder="Full name"  class ="name-input" required>
                 <input type="email" name="email" placeholder="E-mail"  class ="email-input" required>
                 <input type="password" name="password" placeholder="Password" class ="password-input"required>
