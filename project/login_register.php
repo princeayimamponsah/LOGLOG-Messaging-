@@ -48,7 +48,7 @@ if (isset($_POST['login'])){
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
 
-    $stmt = $conn->prepare("SELECT id, name, email, password, role FROM users WHERE email = ? LIMIT 1");
+    $stmt = $conn->prepare("SELECT id, name, email, password, role, profile_pic FROM users WHERE email = ? LIMIT 1");
     $stmt->bind_param('s', $email);
     $stmt->execute();
     $res = $stmt->get_result();
@@ -65,6 +65,7 @@ if (isset($_POST['login'])){
             $_SESSION['email'] = $user['email'];
             $_SESSION['userID'] = $user['id'];
             $_SESSION['role'] = $user['role'];
+            $_SESSION['profile_pic'] = $user['profile_pic'] ?? '';
             header('Location: Home.php');
             exit();
         }
